@@ -1,0 +1,11 @@
+<!--for object rendering-->
+{% extends 'base.html' %}
+{% block body %}
+
+{% for i in books %}
+<ul>
+    <img src="{{i.cover}}" style="width:100px; height:100px;">
+    <li>{{i.name}} by {{i.author}}</li>
+</ul>
+{% endfor %}
+{% endblock %}

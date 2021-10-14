@@ -1,0 +1,10 @@
+product_and_price={"gloves":100,
+                   "balls":50,
+                   "stumps":120,
+                   "bat":1100,
+                   "bails":40}
+print(product_and_price.get("gloves"))
+print(product_and_price.get("balls"))
+print(product_and_price.get("stumps"))
+print(product_and_price.get("bat"))
+print(product_and_price.get("bails"))

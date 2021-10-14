@@ -1,0 +1,9 @@
+<!--for loops in templates-->
+{% extends 'base.html' %}
+{% block body %}
+{% for i in books %}
+<ul>
+    <li>{{i}}</li>
+</ul>
+{% endfor %}
+{% endblock %}
