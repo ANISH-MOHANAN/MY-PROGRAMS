@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login </title>
+    <link rel="shortcut icon" href="{% static 'assets/images/fav.png' %}" type="image/x-icon">
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Merriweather&display=swap' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'assets/images/fav.jpg' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawsom-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/grid-gallery/css/grid-gallery.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" />
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'login/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'login/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+<header class="continer-fluid ">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row col-det">
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <ul class="ulleft">
+                                <li>
+                                    <i class="far fa-envelope"></i>
+                                    blooddoners.com
+                                    <span>|</span></li>
+                                <li>
+                                    <i class="far fa-clock"></i>
+                                    Service Time : 10:AM-12:PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu-jk" class="header-bottom">
+                <div class="container">
+                    <div class="row nav-row">
+                        <div class="col-md-3 logo">
+                            <a href="/">
+                            <img src="{% static 'assets/images/logo.jpg' %}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-9 nav-col">
+                            <nav class="navbar navbar-expand-lg navbar-light">
+
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#navbarNav"
+                                    aria-controls="navbarNav"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+                <form action="login" method="post">
+                     {% csrf_token %}
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+					<span class="login100-form-title">
+						SIGN IN
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Please enter password">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="text-right p-t-13 p-b-23">
+						<span class="txt1">
+							Forgot
+						</span>
+
+						<a href="registration" class="txt2">
+							Username / Password?
+						</a>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Sign in
+						</button>
+					</div>
+
+					<div class="flex-col-c p-t-170 p-b-40">
+						<span class="txt1 p-b-9">
+							Don’t have an account?
+						</span>
+
+						<a href="registration" class="txt3">
+							Register now
+						</a>
+					</div>
+                </form>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<footer id="contact" class="container-fluid">
+        <div class="container">
+
+            <div class="row content-ro">
+                <div class="col-lg-4 col-md-12 footer-contact">
+                    <h2>Contact Informatins</h2>
+                    <div class="address-row">
+                        <div class="icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail">
+                            <p> Mahatma Gandhi Road, Near KSRTC Bus Stand, Karikkamuri, Shenoys, Ernakulam, Kerala, Pin:682011,India</p>
+                        </div>
+                    </div>
+                    <div class="address-row">
+                        <div class="icon">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="detail">
+                            <p>support@blooddoners.com <br> ceo@blooddoners.com</p>
+                        </div>
+                    </div>
+                    <div class="address-row">
+                        <div class="icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="detail">
+                            <p>+91 8892805278 <br> +91 8921475359</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 footer-links">
+                   <div class="row no-margin mt-2">
+
+                    </ul>
+                    </div>
+                   <div class="row no-margin mt-1">
+
+                    </ul>
+                   </div>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                        <p>Copyright ©www.blooddoners.com | All right reserved.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 socila-link">
+                        <ul>
+
+                            <li><a><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a><i class="fab fa-twitter"></i></a></li>
+                            <li><a><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+	<script src="{% static 'login/js/main.js' %}"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/grid-gallery/js/grid-gallery.min.js"></script>
+    <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+    <script src="assets/js/script.js"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'login/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'login/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+</html>
+
+
+
+
+
+
